@@ -81,7 +81,6 @@ onBeforeUnmount(() => {
       <div class="chart-stage" aria-label="Sticky chart stage">
         <div class="stage-frame">
           <WinterChart :active-beat="activeBeat" />
-          <p class="stage-debug">Active beat {{ activeBeat }}</p>
         </div>
       </div>
 
@@ -99,5 +98,17 @@ onBeforeUnmount(() => {
         </article>
       </section>
     </section>
+
+    <footer class="footer">
+      <p>
+        Temperature data:
+        <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo Historical Weather API</a>
+        (ERA5), CC BY 4.0.
+      </p>
+      <p>
+        Corroborating context: Minnesota DNR
+        <a href="https://www.dnr.state.mn.us/" target="_blank" rel="noopener">State Climatology Office</a>.
+      </p>
+    </footer>
   </main>
 </template>

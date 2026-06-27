@@ -161,7 +161,7 @@ p {
 }
 
 .winter-chart__layer {
-  transition: opacity 420ms ease;
+  transition: opacity 400ms ease;
 }
 
 .winter-chart__ramp-line {
@@ -354,17 +354,6 @@ p {
   color: var(--amber);
 }
 
-.stage-debug {
-  position: absolute;
-  right: 1.5rem;
-  bottom: 1.25rem;
-  font-family: var(--font-data);
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(237, 241, 245, 0.42);
-}
-
 .beats {
   grid-column: 2;
   position: relative;
@@ -427,7 +416,31 @@ p {
   color: rgba(237, 241, 245, 0.82);
 }
 
-@media (max-width: 900px) {
+.footer {
+  margin-top: 6rem;
+  padding: 2rem clamp(1rem, 3vw, 2.5rem);
+  border-top: 1px solid rgba(110, 140, 168, 0.16);
+  font-family: var(--font-data);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: rgba(191, 227, 242, 0.62);
+  letter-spacing: 0.02em;
+}
+
+.footer a {
+  color: rgba(237, 241, 245, 0.88);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(237, 241, 245, 0.34);
+  transition: border-color 0.2s;
+}
+
+.footer a:hover,
+.footer a:focus-visible {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+@media (max-width: 380px) {
   .story-shell {
     width: min(100vw - 1rem, 72rem);
   }
@@ -457,13 +470,18 @@ p {
     border-radius: 0.8rem;
   }
 
-  .stage-debug {
-    right: 1rem;
-    bottom: 1rem;
-  }
-
   .beat {
     padding-right: 0.5rem;
+  }
+
+  .scrubber__track::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+  }
+
+  .scrubber__track::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
   }
 }
 
