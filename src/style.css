@@ -69,13 +69,26 @@ p {
   padding: 1.25rem 0 12vh;
 }
 
-.story-stage {
+.story-scene {
+  display: grid;
+  grid-template-areas: 'stack';
+  align-items: start;
+  position: relative;
+}
+
+.chart-stage,
+.beats {
+  grid-area: stack;
+}
+
+.chart-stage {
   position: sticky;
   top: 0;
   z-index: 0;
   display: grid;
   place-items: center;
-  min-height: 100svh;
+  height: 100vh;
+  min-height: 100vh;
   padding: 1rem 0;
 }
 
@@ -113,48 +126,118 @@ p {
 
 .stage-placeholder {
   display: grid;
-  align-content: center;
-  gap: 0.9rem;
+  align-content: start;
+  gap: 0.5rem;
   min-height: calc(min(80svh, 42rem) - 5rem);
 }
 
-.stage-placeholder__label {
+.winter-chart {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.winter-chart__grid-line {
+  stroke: rgba(46, 74, 102, 0.44);
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+.winter-chart__mean-line {
+  stroke: rgba(191, 227, 242, 0.34);
+  stroke-width: 1;
+  stroke-dasharray: 4 6;
+}
+
+.winter-chart__base-dots {
+  opacity: 0.4;
+}
+
+.winter-chart__dot {
+  fill: var(--slate);
+  opacity: 0.95;
+}
+
+.winter-chart__layer {
+  transition: opacity 420ms ease;
+}
+
+.winter-chart__ramp-line {
+  stroke: var(--slate);
+  stroke-width: 2;
+}
+
+.winter-chart__step-line {
+  stroke: var(--frost);
+  stroke-width: 2.4;
+  stroke-linecap: square;
+}
+
+.winter-chart__band-area {
+  fill: rgba(110, 140, 168, 0.26);
+}
+
+.winter-chart__band-edge {
+  fill: none;
+  stroke: rgba(232, 161, 60, 0.55);
+  stroke-width: 1.5;
+}
+
+.winter-chart__annotation {
+  fill: rgba(237, 241, 245, 0.76);
   font-family: var(--font-data);
-  font-size: 0.84rem;
-  letter-spacing: 0.16em;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+}
+
+.winter-chart__annotation--warm {
+  fill: rgba(232, 161, 60, 0.92);
+}
+
+.winter-chart__annotation--cold {
+  fill: rgba(191, 227, 242, 0.92);
+}
+
+.winter-chart__record-dot--warm {
+  fill: var(--amber);
+}
+
+.winter-chart__record-dot--cold {
+  fill: var(--ice);
+}
+
+.winter-chart__label {
+  fill: rgba(46, 74, 102, 0.82);
+  font-family: var(--font-data);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.winter-chart__label--right {
+  text-anchor: end;
+}
+
+.stage-debug {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.25rem;
+  font-family: var(--font-data);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(191, 227, 242, 0.72);
+  color: rgba(237, 241, 245, 0.42);
 }
 
-.stage-placeholder__value {
-  font-family: var(--font-data);
-  font-size: clamp(3rem, 10vw, 5.25rem);
-  line-height: 0.92;
-  color: var(--amber);
-}
-
-.stage-placeholder__title {
-  font-family: var(--font-display);
-  font-size: clamp(1.6rem, 3.2vw, 2.75rem);
-  line-height: 1.05;
-  max-width: 12ch;
-}
-
-.stage-placeholder__copy {
-  max-width: 28rem;
-  color: rgba(237, 241, 245, 0.8);
-  font-size: clamp(1rem, 1.7vw, 1.1rem);
-}
-
-.story-beats {
+.beats {
   position: relative;
   z-index: 1;
+  padding-top: 0;
 }
 
 .beat {
   display: grid;
   align-content: center;
-  min-height: 100svh;
+  min-height: 100vh;
   max-width: 34rem;
   padding: 12vh 0;
   margin-left: auto;
@@ -194,8 +277,17 @@ p {
     width: min(100vw - 1rem, 72rem);
   }
 
+  .chart-stage {
+    padding-top: 0.5rem;
+  }
+
   .stage-frame {
     border-radius: 1.25rem;
+  }
+
+  .stage-debug {
+    right: 1rem;
+    bottom: 1rem;
   }
 
   .beat {
@@ -208,5 +300,9 @@ p {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .winter-chart__layer {
+    transition: none;
   }
 }

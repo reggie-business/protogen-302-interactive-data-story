@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref, type ComponentPublicInstance } from 'vue'
+import { onBeforeUnmount, onMounted, ref, type ComponentPublicInstance } from 'vue'
+import WinterChart from './components/WinterChart.vue'
 
 type Beat = {
   id: number
@@ -34,8 +35,6 @@ const activeBeat = ref(1)
 const beatElements = ref<(HTMLElement | null)[]>([])
 let observer: IntersectionObserver | null = null
 
-const activeBeatCard = computed(() => beats[activeBeat.value - 1] ?? beats[0])
-
 const registerBeat = (index: number) => (element: Element | ComponentPublicInstance | null) => {
   beatElements.value[index] = element instanceof HTMLElement ? element : null
 }
@@ -43,15 +42,13 @@ const registerBeat = (index: number) => (element: Element | ComponentPublicInsta
 onMounted(() => {
   observer = new IntersectionObserver(
     (entries) => {
-      const visibleEntries = entries.filter((entry) => entry.isIntersecting)
+      const activeEntry = entries.find((entry) => entry.isIntersecting)
 
-      if (!visibleEntries.length) {
+      if (!activeEntry) {
         return
       }
 
-      visibleEntries.sort((left, right) => right.intersectionRatio - left.intersectionRatio)
-
-      const target = visibleEntries[0].target as HTMLElement
+      const target = activeEntry.target as HTMLElement
       const index = Number(target.dataset.beatIndex)
 
       if (!Number.isNaN(index)) {
@@ -60,8 +57,8 @@ onMounted(() => {
     },
     {
       root: null,
-      threshold: [0, 0.25, 0.5, 0.75],
-      rootMargin: '-42% 0px -42% 0px',
+      threshold: 0,
+      rootMargin: '-50% 0px -50% 0px',
     },
   )
 
@@ -80,30 +77,27 @@ onBeforeUnmount(() => {
 
 <template>
   <main class="story-shell">
-    <section class="story-stage" aria-label="Sticky chart stage">
-      <div class="stage-frame">
-        <p class="stage-kicker">Sticky chart stage</p>
-        <div class="stage-placeholder" aria-live="polite">
-          <p class="stage-placeholder__label">Active beat</p>
-          <p class="stage-placeholder__value">{{ activeBeat }}</p>
-          <h2 class="stage-placeholder__title">{{ activeBeatCard.title }}</h2>
-          <p class="stage-placeholder__copy">{{ activeBeatCard.copy }}</p>
+    <section class="story-scene" aria-label="Story scene">
+      <div class="chart-stage" aria-label="Sticky chart stage">
+        <div class="stage-frame">
+          <WinterChart :active-beat="activeBeat" />
+          <p class="stage-debug">Active beat {{ activeBeat }}</p>
         </div>
       </div>
-    </section>
 
-    <section class="story-beats" aria-label="Story beats">
-      <article
-        v-for="(beat, index) in beats"
-        :key="beat.id"
-        :ref="registerBeat(index)"
-        :data-beat-index="index"
-        class="beat"
-      >
-        <p class="beat-kicker">Beat {{ beat.id }}</p>
-        <h2>{{ beat.title }}</h2>
-        <p>{{ beat.copy }}</p>
-      </article>
+      <section class="beats" aria-label="Story beats">
+        <article
+          v-for="(beat, index) in beats"
+          :key="beat.id"
+          :ref="registerBeat(index)"
+          :data-beat-index="index"
+          class="beat"
+        >
+          <p class="beat-kicker">Beat {{ beat.id }}</p>
+          <h2>{{ beat.title }}</h2>
+          <p>{{ beat.copy }}</p>
+        </article>
+      </section>
     </section>
   </main>
 </template>
