@@ -1,0 +1,452 @@
+[
+  {
+    "year": 1951,
+    "avgLow": 5.8,
+    "avgHigh": 21.0,
+    "subzero": 31
+  },
+  {
+    "year": 1952,
+    "avgLow": 10.0,
+    "avgHigh": 24.7,
+    "subzero": 22
+  },
+  {
+    "year": 1953,
+    "avgLow": 11.5,
+    "avgHigh": 25.9,
+    "subzero": 16
+  },
+  {
+    "year": 1954,
+    "avgLow": 9.1,
+    "avgHigh": 26.9,
+    "subzero": 25
+  },
+  {
+    "year": 1955,
+    "avgLow": 8.3,
+    "avgHigh": 23.0,
+    "subzero": 19
+  },
+  {
+    "year": 1956,
+    "avgLow": 5.4,
+    "avgHigh": 21.5,
+    "subzero": 30
+  },
+  {
+    "year": 1957,
+    "avgLow": 7.2,
+    "avgHigh": 25.2,
+    "subzero": 29
+  },
+  {
+    "year": 1958,
+    "avgLow": 11.7,
+    "avgHigh": 27.0,
+    "subzero": 24
+  },
+  {
+    "year": 1959,
+    "avgLow": 3.6,
+    "avgHigh": 21.3,
+    "subzero": 39
+  },
+  {
+    "year": 1960,
+    "avgLow": 13.4,
+    "avgHigh": 27.4,
+    "subzero": 11
+  },
+  {
+    "year": 1961,
+    "avgLow": 11.4,
+    "avgHigh": 26.9,
+    "subzero": 17
+  },
+  {
+    "year": 1962,
+    "avgLow": 5.1,
+    "avgHigh": 19.9,
+    "subzero": 35
+  },
+  {
+    "year": 1963,
+    "avgLow": 3.8,
+    "avgHigh": 20.3,
+    "subzero": 40
+  },
+  {
+    "year": 1964,
+    "avgLow": 10.0,
+    "avgHigh": 26.1,
+    "subzero": 19
+  },
+  {
+    "year": 1965,
+    "avgLow": 2.7,
+    "avgHigh": 19.7,
+    "subzero": 39
+  },
+  {
+    "year": 1966,
+    "avgLow": 6.2,
+    "avgHigh": 22.4,
+    "subzero": 35
+  },
+  {
+    "year": 1967,
+    "avgLow": 6.9,
+    "avgHigh": 22.6,
+    "subzero": 28
+  },
+  {
+    "year": 1968,
+    "avgLow": 8.4,
+    "avgHigh": 24.9,
+    "subzero": 30
+  },
+  {
+    "year": 1969,
+    "avgLow": 8.7,
+    "avgHigh": 21.6,
+    "subzero": 26
+  },
+  {
+    "year": 1970,
+    "avgLow": 7.5,
+    "avgHigh": 21.2,
+    "subzero": 25
+  },
+  {
+    "year": 1971,
+    "avgLow": 5.3,
+    "avgHigh": 20.4,
+    "subzero": 35
+  },
+  {
+    "year": 1972,
+    "avgLow": 3.4,
+    "avgHigh": 19.8,
+    "subzero": 34
+  },
+  {
+    "year": 1973,
+    "avgLow": 9.4,
+    "avgHigh": 24.2,
+    "subzero": 26
+  },
+  {
+    "year": 1974,
+    "avgLow": 8.8,
+    "avgHigh": 24.3,
+    "subzero": 25
+  },
+  {
+    "year": 1975,
+    "avgLow": 13.2,
+    "avgHigh": 26.8,
+    "subzero": 13
+  },
+  {
+    "year": 1976,
+    "avgLow": 10.6,
+    "avgHigh": 26.5,
+    "subzero": 23
+  },
+  {
+    "year": 1977,
+    "avgLow": 4.5,
+    "avgHigh": 21.6,
+    "subzero": 39
+  },
+  {
+    "year": 1978,
+    "avgLow": 4.0,
+    "avgHigh": 19.6,
+    "subzero": 36
+  },
+  {
+    "year": 1979,
+    "avgLow": 2.8,
+    "avgHigh": 16.6,
+    "subzero": 37
+  },
+  {
+    "year": 1980,
+    "avgLow": 10.5,
+    "avgHigh": 26.1,
+    "subzero": 24
+  },
+  {
+    "year": 1981,
+    "avgLow": 12.2,
+    "avgHigh": 27.1,
+    "subzero": 23
+  },
+  {
+    "year": 1982,
+    "avgLow": 4.9,
+    "avgHigh": 19.1,
+    "subzero": 31
+  },
+  {
+    "year": 1983,
+    "avgLow": 16.6,
+    "avgHigh": 29.1,
+    "subzero": 10
+  },
+  {
+    "year": 1984,
+    "avgLow": 8.6,
+    "avgHigh": 21.3,
+    "subzero": 27
+  },
+  {
+    "year": 1985,
+    "avgLow": 5.8,
+    "avgHigh": 23.3,
+    "subzero": 29
+  },
+  {
+    "year": 1986,
+    "avgLow": 7.3,
+    "avgHigh": 21.8,
+    "subzero": 28
+  },
+  {
+    "year": 1987,
+    "avgLow": 18.4,
+    "avgHigh": 32.5,
+    "subzero": 6
+  },
+  {
+    "year": 1988,
+    "avgLow": 7.8,
+    "avgHigh": 23.3,
+    "subzero": 30
+  },
+  {
+    "year": 1989,
+    "avgLow": 7.7,
+    "avgHigh": 25.4,
+    "subzero": 26
+  },
+  {
+    "year": 1990,
+    "avgLow": 11.2,
+    "avgHigh": 27.9,
+    "subzero": 17
+  },
+  {
+    "year": 1991,
+    "avgLow": 9.2,
+    "avgHigh": 26.5,
+    "subzero": 23
+  },
+  {
+    "year": 1992,
+    "avgLow": 16.3,
+    "avgHigh": 29.9,
+    "subzero": 14
+  },
+  {
+    "year": 1993,
+    "avgLow": 10.6,
+    "avgHigh": 24.8,
+    "subzero": 24
+  },
+  {
+    "year": 1994,
+    "avgLow": 4.4,
+    "avgHigh": 19.5,
+    "subzero": 37
+  },
+  {
+    "year": 1995,
+    "avgLow": 13.8,
+    "avgHigh": 27.8,
+    "subzero": 10
+  },
+  {
+    "year": 1996,
+    "avgLow": 6.2,
+    "avgHigh": 22.3,
+    "subzero": 34
+  },
+  {
+    "year": 1997,
+    "avgLow": 8.8,
+    "avgHigh": 22.5,
+    "subzero": 22
+  },
+  {
+    "year": 1998,
+    "avgLow": 20.5,
+    "avgHigh": 31.7,
+    "subzero": 7
+  },
+  {
+    "year": 1999,
+    "avgLow": 14.0,
+    "avgHigh": 29.0,
+    "subzero": 16
+  },
+  {
+    "year": 2000,
+    "avgLow": 14.6,
+    "avgHigh": 30.5,
+    "subzero": 18
+  },
+  {
+    "year": 2001,
+    "avgLow": 5.8,
+    "avgHigh": 20.6,
+    "subzero": 33
+  },
+  {
+    "year": 2002,
+    "avgLow": 18.9,
+    "avgHigh": 33.0,
+    "subzero": 5
+  },
+  {
+    "year": 2003,
+    "avgLow": 10.9,
+    "avgHigh": 26.2,
+    "subzero": 24
+  },
+  {
+    "year": 2004,
+    "avgLow": 11.6,
+    "avgHigh": 25.8,
+    "subzero": 17
+  },
+  {
+    "year": 2005,
+    "avgLow": 12.8,
+    "avgHigh": 28.3,
+    "subzero": 16
+  },
+  {
+    "year": 2006,
+    "avgLow": 15.0,
+    "avgHigh": 28.4,
+    "subzero": 11
+  },
+  {
+    "year": 2007,
+    "avgLow": 13.5,
+    "avgHigh": 27.5,
+    "subzero": 17
+  },
+  {
+    "year": 2008,
+    "avgLow": 6.5,
+    "avgHigh": 22.0,
+    "subzero": 32
+  },
+  {
+    "year": 2009,
+    "avgLow": 4.8,
+    "avgHigh": 22.3,
+    "subzero": 32
+  },
+  {
+    "year": 2010,
+    "avgLow": 9.1,
+    "avgHigh": 22.7,
+    "subzero": 23
+  },
+  {
+    "year": 2011,
+    "avgLow": 7.6,
+    "avgHigh": 21.0,
+    "subzero": 23
+  },
+  {
+    "year": 2012,
+    "avgLow": 19.8,
+    "avgHigh": 33.2,
+    "subzero": 3
+  },
+  {
+    "year": 2013,
+    "avgLow": 10.6,
+    "avgHigh": 26.5,
+    "subzero": 16
+  },
+  {
+    "year": 2014,
+    "avgLow": 0.1,
+    "avgHigh": 17.0,
+    "subzero": 50
+  },
+  {
+    "year": 2015,
+    "avgLow": 10.1,
+    "avgHigh": 24.5,
+    "subzero": 28
+  },
+  {
+    "year": 2016,
+    "avgLow": 16.8,
+    "avgHigh": 29.5,
+    "subzero": 11
+  },
+  {
+    "year": 2017,
+    "avgLow": 15.5,
+    "avgHigh": 30.8,
+    "subzero": 18
+  },
+  {
+    "year": 2018,
+    "avgLow": 5.0,
+    "avgHigh": 24.1,
+    "subzero": 36
+  },
+  {
+    "year": 2019,
+    "avgLow": 6.8,
+    "avgHigh": 24.0,
+    "subzero": 29
+  },
+  {
+    "year": 2020,
+    "avgLow": 9.0,
+    "avgHigh": 27.5,
+    "subzero": 21
+  },
+  {
+    "year": 2021,
+    "avgLow": 8.9,
+    "avgHigh": 26.1,
+    "subzero": 23
+  },
+  {
+    "year": 2022,
+    "avgLow": 3.6,
+    "avgHigh": 24.8,
+    "subzero": 36
+  },
+  {
+    "year": 2023,
+    "avgLow": 9.2,
+    "avgHigh": 26.1,
+    "subzero": 25
+  },
+  {
+    "year": 2024,
+    "avgLow": 20.9,
+    "avgHigh": 36.2,
+    "subzero": 8
+  },
+  {
+    "year": 2025,
+    "avgLow": 10.5,
+    "avgHigh": 24.5,
+    "subzero": 28
+  }
+]
