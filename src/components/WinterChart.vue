@@ -363,8 +363,9 @@ const scrubBandOpacity = computed(() => (props.activeBeat === 4 ? 1 : 0))
         <g v-if="coldest" class="winter-chart__record-group">
           <circle :cx="x(coldest.year)" :cy="y(coldest.avgLow)" r="5" class="winter-chart__record-dot--cold" />
           <text
-            :x="x(coldest.year) + 12"
+            :x="x(coldest.year) - 14"
             :y="y(coldest.avgLow) + 6"
+            text-anchor="end"
             class="winter-chart__annotation winter-chart__annotation--cold"
           >coldest in 75 yrs</text>
         </g>
@@ -387,8 +388,9 @@ const scrubBandOpacity = computed(() => (props.activeBeat === 4 ? 1 : 0))
         <g v-if="coldest && scrubYear >= 2014" class="winter-chart__record-group">
           <circle :cx="x(coldest.year)" :cy="y(coldest.avgLow)" r="5" class="winter-chart__record-dot--cold" />
           <text
-            :x="x(coldest.year) + 12"
+            :x="x(coldest.year) - 14"
             :y="y(coldest.avgLow) + 6"
+            text-anchor="end"
             class="winter-chart__annotation winter-chart__annotation--cold"
           >coldest in 75 yrs</text>
         </g>
