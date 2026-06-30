@@ -11,23 +11,23 @@ type Beat = {
 const beats: Beat[] = [
   {
     id: 1,
-    title: 'The fortress',
-    copy: 'Winter was supposed to keep ramping colder. Minneapolis lived inside that belief.',
+    title: 'The snow fort',
+    copy: "Winter is supposed to keep us on ice. It's part of our constitution, and our identity.",
   },
   {
     id: 2,
     title: 'The step',
-    copy: 'The warming jumped in the 1980s and early 1990s, then flattened out.',
+    copy: 'Warming jumped in the 1980s and early 90s, then flattened out.',
   },
   {
     id: 3,
-    title: 'The swing',
-    copy: 'The spread widened. Recent winters swing from deep freeze to thaw.',
+    title: 'The spread',
+    copy: 'It widened. Nowadays, winters swing from deep freeze to unexpected thaw (the perfect recipe for ubiquitous potholes).',
   },
   {
     id: 4,
-    title: 'The payoff',
-    copy: 'The winter now behaves like a coin flip, and that changes how the city plans.',
+    title: 'Heads or tails?',
+    copy: 'Winter now behaves like a coin flip, changing how the Cities plan and slowly defrosting how we view our home.',
   },
 ]
 
@@ -92,7 +92,6 @@ onBeforeUnmount(() => {
           :data-beat-index="index"
           class="beat"
         >
-          <p class="beat-kicker">Beat {{ beat.id }}</p>
           <h2>{{ beat.title }}</h2>
           <p>{{ beat.copy }}</p>
         </article>

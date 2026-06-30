@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .snowflake-stroke { stroke: #E8A13C; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <g transform="translate(50, 50)">
+    <!-- Outer hexagon points -->
+    <line x1="0" y1="-40" x2="0" y2="-50" class="snowflake-stroke" stroke-width="2"/>
+    <line x1="34.64" y1="-20" x2="43.3" y2="-25" class="snowflake-stroke" stroke-width="2"/>
+    <line x1="34.64" y1="20" x2="43.3" y2="25" class="snowflake-stroke" stroke-width="2"/>
+    <line x1="0" y1="40" x2="0" y2="50" class="snowflake-stroke" stroke-width="2"/>
+    <line x1="-34.64" y1="20" x2="-43.3" y2="25" class="snowflake-stroke" stroke-width="2"/>
+    <line x1="-34.64" y1="-20" x2="-43.3" y2="-25" class="snowflake-stroke" stroke-width="2"/>
+    
+    <!-- Inner branches -->
+    <line x1="0" y1="-40" x2="12" y2="-35" class="snowflake-stroke" stroke-width="1.5"/>
+    <line x1="0" y1="-40" x2="-12" y2="-35" class="snowflake-stroke" stroke-width="1.5"/>
+    
+    <line x1="34.64" y1="-20" x2="30" y2="-10" class="snowflake-stroke" stroke-width="1.5"/>
+    <line x1="34.64" y1="-20" x2="38" y2="-28" class="snowflake-stroke" stroke-width="1.5"/>
+    
+    <line x1="34.64" y1="20" x2="30" y2="10" class="snowflake-stroke" stroke-width="1.5"/>
+    <line x1="34.64" y1="20" x2="38" y2="28" class="snowflake-stroke" stroke-width="1.5"/>
+    
+    <line x1="0" y1="40" x2="12" y2="35" class="snowflake-stroke" stroke-width="1.5"/>
+    <line x1="0" y1="40" x2="-12" y2="35" class="snowflake-stroke" stroke-width="1.5"/>
+    
+    <line x1="-34.64" y1="20" x2="-30" y2="10" class="snowflake-stroke" stroke-width="1.5"/>
+    <line x1="-34.64" y1="20" x2="-38" y2="28" class="snowflake-stroke" stroke-width="1.5"/>
+    
+    <line x1="-34.64" y1="-20" x2="-30" y2="-10" class="snowflake-stroke" stroke-width="1.5"/>
+    <line x1="-34.64" y1="-20" x2="-38" y2="-28" class="snowflake-stroke" stroke-width="1.5"/>
+    
+    <!-- Center point -->
+    <circle cx="0" cy="0" r="2" fill="#E8A13C"/>
+  </g>
+</svg>

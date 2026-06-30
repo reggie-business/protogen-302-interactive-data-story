@@ -240,10 +240,19 @@ const stepOpacity = computed(() => {
 
 const bandOpacity = computed(() => (props.activeBeat === 3 ? 1 : 0))
 const scrubBandOpacity = computed(() => (props.activeBeat === 4 ? 1 : 0))
+
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
 </script>
 
 <template>
   <div class="winter-chart-wrap">
+    <!-- Title bar with seal -->
+    <div class="winter-chart-title-bar">
+      <h1 class="winter-chart-title">Keep Cool, MN</h1>
+      <img src="/mn-seal.png" alt="Minnesota seal" class="winter-chart-seal" />
+    </div>
+
     <svg
       class="winter-chart"
       viewBox="0 0 960 600"
@@ -285,9 +294,10 @@ const scrubBandOpacity = computed(() => (props.activeBeat === 4 ? 1 : 0))
         class="winter-chart__mean-line"
       />
       <text
-        :x="viewBoxWidth - padding.right"
+        v-if="!isPayoffBeat"
+        :x="padding.left + 6"
         :y="y(meanAvgLow) - 8"
-        class="winter-chart__label winter-chart__label--right"
+        class="winter-chart__label"
       >75-yr avg</text>
 
       <!-- Base dots: opacity driven per dot when in beat 4 -->
@@ -297,7 +307,7 @@ const scrubBandOpacity = computed(() => (props.activeBeat === 4 ? 1 : 0))
           :key="row.year"
           :cx="x(row.year)"
           :cy="y(row.avgLow)"
-          r="3.5"
+          r="3.9"
           :style="{ opacity: dotOpacity(row.year) }"
           class="winter-chart__dot"
         />
@@ -346,10 +356,11 @@ const scrubBandOpacity = computed(() => (props.activeBeat === 4 ? 1 : 0))
         <path :d="spreadAreaPath" class="winter-chart__band-area" />
         <path :d="spreadUpperEdgePath" class="winter-chart__band-edge" />
         <g v-if="warmest" class="winter-chart__record-group">
-          <circle :cx="x(warmest.year)" :cy="y(warmest.avgLow)" r="5" class="winter-chart__record-dot--warm" />
+          <circle :cx="x(warmest.year)" :cy="y(warmest.avgLow)" r="5.5" class="winter-chart__record-dot--warm" />
           <text
-            :x="x(warmest.year) - 12"
+            :x="x(warmest.year) - 14"
             :y="y(warmest.avgLow) - 12"
+            text-anchor="end"
             class="winter-chart__annotation winter-chart__annotation--warm"
           >warmest in 75 yrs</text>
         </g>
@@ -369,10 +380,11 @@ const scrubBandOpacity = computed(() => (props.activeBeat === 4 ? 1 : 0))
         <path :d="scrubSpreadUpperEdgePath" class="winter-chart__band-edge" />
 
         <g v-if="warmest && scrubYear >= 2024" class="winter-chart__record-group">
-          <circle :cx="x(warmest.year)" :cy="y(warmest.avgLow)" r="5" class="winter-chart__record-dot--warm" />
+          <circle :cx="x(warmest.year)" :cy="y(warmest.avgLow)" r="5.5" class="winter-chart__record-dot--warm" />
           <text
-            :x="x(warmest.year) - 12"
+            :x="x(warmest.year) - 14"
             :y="y(warmest.avgLow) - 12"
+            text-anchor="end"
             class="winter-chart__annotation winter-chart__annotation--warm"
           >warmest in 75 yrs</text>
         </g>
@@ -396,7 +408,7 @@ const scrubBandOpacity = computed(() => (props.activeBeat === 4 ? 1 : 0))
         <circle
           :cx="x(scrubYear)"
           :cy="y(scrubRow.avgLow)"
-          r="7"
+          r="7.8"
           class="winter-chart__playhead-dot"
         />
 
@@ -470,6 +482,7 @@ const scrubBandOpacity = computed(() => (props.activeBeat === 4 ? 1 : 0))
         Swing of the last 15 winters:
         <strong>{{ scrubSwing }}°F</strong>
       </p>
+      <p class="scrubber__helper">Drag slider for details.</p>
     </div>
   </div>
 </template>
