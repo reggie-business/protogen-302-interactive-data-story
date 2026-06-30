@@ -320,7 +320,7 @@ const scrubBandOpacity = computed(() => (props.activeBeat === 4 ? 1 : 0))
         />
         <text
           :x="x(1974)"
-          :y="y(regression.startTemp + (regression.endTemp - regression.startTemp) * 0.45) - 12"
+          :y="y(regression.startTemp + (regression.endTemp - regression.startTemp) * 0.45) - 18"
           class="winter-chart__annotation"
         >the steady ramp you'd expect</text>
       </g>
