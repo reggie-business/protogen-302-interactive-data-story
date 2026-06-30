@@ -241,15 +241,11 @@ const stepOpacity = computed(() => {
 const bandOpacity = computed(() => (props.activeBeat === 3 ? 1 : 0))
 const scrubBandOpacity = computed(() => (props.activeBeat === 4 ? 1 : 0))
 
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-
 </script>
 
 <template>
   <div class="winter-chart-wrap">
-    <!-- Title bar with seal -->
     <div class="winter-chart-title-bar">
-      <h1 class="winter-chart-title">Keep Cool, MN</h1>
       <img src="/mn-seal.png" alt="Minnesota seal" class="winter-chart-seal" />
     </div>
 

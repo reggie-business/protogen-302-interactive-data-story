@@ -22,7 +22,7 @@ const beats: Beat[] = [
   {
     id: 3,
     title: 'The spread',
-    copy: 'It widened. Nowadays, winters swing from deep freeze to unexpected thaw (the perfect recipe for ubiquitous potholes).',
+    copy: 'Seasonal variance widened. Nowadays, winters swing from deep freeze to unexpected thaw (the perfect recipe for ubiquitous potholes).',
   },
   {
     id: 4,
@@ -33,13 +33,22 @@ const beats: Beat[] = [
 
 const activeBeat = ref(1)
 const beatElements = ref<(HTMLElement | null)[]>([])
+const hasUserScrolled = ref(false)
 let observer: IntersectionObserver | null = null
+
+const onScroll = () => {
+  if (!hasUserScrolled.value && window.scrollY > 16) {
+    hasUserScrolled.value = true
+  }
+}
 
 const registerBeat = (index: number) => (element: Element | ComponentPublicInstance | null) => {
   beatElements.value[index] = element instanceof HTMLElement ? element : null
 }
 
 onMounted(() => {
+  window.addEventListener('scroll', onScroll, { passive: true })
+
   observer = new IntersectionObserver(
     (entries) => {
       const activeEntry = entries.find((entry) => entry.isIntersecting)
@@ -70,6 +79,7 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
+  window.removeEventListener('scroll', onScroll)
   observer?.disconnect()
   observer = null
 })
@@ -82,6 +92,15 @@ onBeforeUnmount(() => {
         <div class="stage-frame">
           <WinterChart :active-beat="activeBeat" />
         </div>
+      </div>
+
+      <div
+        class="scroll-hint"
+        :class="{ 'is-hidden': hasUserScrolled }"
+        aria-hidden="true"
+      >
+        <span>Scroll</span>
+        <span class="scroll-hint__chevron">⌄</span>
       </div>
 
       <section class="beats" aria-label="Story beats">
