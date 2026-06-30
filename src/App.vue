@@ -12,7 +12,7 @@ const beats: Beat[] = [
   {
     id: 1,
     title: 'The snow fort',
-    copy: "Winter is supposed to keep us on ice. It's part of our constitution, and our identity.",
+    copy: "Winter is supposed to keep us cold. It's part of our constitution, and our identity.",
   },
   {
     id: 2,
